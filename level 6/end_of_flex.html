@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>felx shirnk , flex grow, and order</title>
+    <style> 
+        * {margin:0; padding:0;} 
+        #heading {text-align:center;}
+        .box {margin:5px; 
+            height:100px; 
+            width:100px; 
+            border:3px solid black;
+            flex-grow:1;  /* ya sab ko ek jaisa size ka kr deta ha width mai*/
+         }
+        #container {height:900px; width:900px; margin:5px; padding:5px; border:3px solid black;
+
+        display:flex;  
+        justify-items:center;
+        }
+
+       #box1 {background-color: aqua; flex-shrink:3; order:3 } /* iis box ko frlx shirnk ne dusro ke compare ma half chota kr diya because of 2 but ya abhi work nhi karega kyuki container ki width items ke width se jyda ha*/ 
+       #box2 {background-color: lightpink; order:4} /* order se items ka order change jota ha*/
+       #box3 {background-color: lightgreen; order:1}
+       #box4 {background-color: lightsalmon; order:2;} 
+    </style>
+</head>
+<body>
+    <h1 id="heading">flex container</h1> 
+    <div id="container"> 
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div> 
+        <div id="box3" class="box">box3</div> 
+        <div id="box4" class="box">box4</div> 
+    </div>
+</body>
+</html>
